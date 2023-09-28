@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <style>
+:root{
+    --color-header:darkkhaki;
+    --color-main:cadetblue;
+    --color-block:darksalmon;
+    --color-icon:bisque;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+header{
+    background-color: var(--color-header);
+    height: 50px;
+}
+.logo{
+    background-color: var(--color-main);
+    width: 50px;
+    height: 50px;
+}
+.general{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.info-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-icon);
+}
+    
+.info-content{
+    text-align: center;
+}
+
+
+.photo{
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-main);
+}
+.photo:first-child{
+    background-color: var(--color-block);
+}
+@media only screen and (min-width:540px) {
+    .general{
+        padding: 10px;
+    }
+    .info{
+        flex-direction: row;
+
+    }
+    .info-img{
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        -moz-transition:opacity 1s ease;
+        transition:opacity 1s ease;
+    }
+    .info-img:hover{
+        opacity: 0;
+    }
+    .info-content{
+        text-align: left;
+    }
+    .photo{
+        height: 150px;
+    }
+}
+@media only screen and (min-width:1024px){
+    header{
+        height: 60px;
+    }
+    .logo{
+        height: 60px;
+    }
+    .general,.galery{
+        flex-direction: row;
+    }
+    .info{
+        flex-direction: column; 
+    }
+    .info-content{
+        text-align: center;
+    }
+    .galery{
+        display: flex;
+    }
+    .photo{
+        width: 50%;
+    }
+    .info-img{
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}
+  </style>
+
+  <body>
+    <header>
+        <div class="logo"></div>
+        <div class="menu"></div>
+    </header>
+    <section class="general">
+        <div class="info">
+            <div class="info-img"></div>
+            <div class="info-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+                pellentesque eu, pretium quis, sem. 
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-img"></div>
+            <div class="info-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+                pellentesque eu, pretium quis, sem. 
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-img"></div>
+            <div class="info-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+                pellentesque eu, pretium quis, sem. 
+            </div>
+        </div>
+    </section>
+    <section class="galery">
+        <div class="photo"></div>
+        <div class="photo"></div>
+    </section>
+    
+   
+  </body>
+</html>
